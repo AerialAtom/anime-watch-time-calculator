@@ -22,11 +22,27 @@ function Calculate() {
     var minutes = episodes_number*24
     var hours = (minutes/60).toFixed(1)
     var days = (hours/24).toFixed(1)
+    
+    var skip1 = episodes_number*22.58
+    var hours1 = (skip1/60).toFixed(1)
+    var days1 = (hours1/24).toFixed(1)
+    
+    var skip2 = episodes_number*21.17
+    var hours2 = (skip2/60).toFixed(1)
+    var days2 = (hours2/24).toFixed(1)
 
     document.getElementById("results").innerHTML = `
       <h4>You have to watch ${minutes} minutes(Non-stop)</h4>
       <h4>You have to watch ${hours} hours(Non-stop)</h4>
       <h4>You have to watch ${days} days(Non-stop)</h4>
+      
+      <h4>You have to watch ${skip1} minutes(Non-stop skipping one songs)</h4>
+      <h4>You have to watch ${hours1} hours(Non-stop skipping one songs)</h4>
+      <h4>You have to watch ${days1} days(Non-stop skipping one songs)</h4>
+      
+      <h4>You have to watch ${skip2} minutes(Non-stop skipping both songs)</h4>
+      <h4>You have to watch ${hours2} hours(Non-stop skipping both songs)</h4>
+      <h4>You have to watch ${days2} days(Non-stop skipping both song)</h4>
     `
   }
 }
